@@ -15,7 +15,7 @@ bool validate_helper(TreeNode* root , long mini,long maxi){
     if(root==NULL){
         return true;
     }
-    if(root->val<mini || root->val>maxi){
+    if(root->val<=mini || root->val>=maxi){
         return false;
     }
     return validate_helper(root->left,mini,root->val) && validate_helper(root->right,root->val,maxi);
